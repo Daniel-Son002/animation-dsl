@@ -6,7 +6,8 @@ user_functions = {}  # Dictionary to store user-defined functions
 
 def interpret(dsl_code):
     shapes = []
-    lines = dsl_code.strip().split("\\n")
+    lines = dsl_code.strip().split("\n")
+    print(lines)
     for line in lines:
         tokens = line.split()
         
@@ -34,11 +35,14 @@ def interpret(dsl_code):
             radius = int(tokens[3].split("=")[1])
             shapes.append(Circle(x, y, radius))
         elif tokens[0] == "square":
+            print("Parsing square:", tokens)
             x = int(tokens[1].split("=")[1])
             y = int(tokens[2].split("=")[1])
             side = int(tokens[3].split("=")[1])
-            shapes.append(Square(x, y, side))
-    
+            square = Square(x, y, side)
+            print("Created square:", square)
+            shapes.append(square)
+    print("Shapes to render:", shapes)
     render_canvas(shapes)
 
 def execute_function(function_name, args, shapes):

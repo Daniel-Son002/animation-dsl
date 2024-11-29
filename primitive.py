@@ -10,6 +10,7 @@ class Shape:
     def render(self, draw):
         raise NotImplementedError("Render method must be implemented by subclasses.")
 
+
 class Circle(Shape):
     def __init__(self, x, y, radius):
         super().__init__(x, y)
@@ -53,20 +54,12 @@ class Square(Shape):
             )
 
 
-
 class Line:
-    def __init__(self, startPoint, endPoint):
-        self.startPoint = startPoint
-        self.endPoint = endPoint
+    def __init__(self, x1, y1, x2, y2):
+        self.x1, self.y1, self.x2, self.y2 = x1, y1, x2, y2  # Store coordinates
 
     def render(self, draw):
-        if self.solver.check():
-            x1_val = self.solver.model()[self.x1].as_decimal(5)
-            y1_val = self.solver.model()[self.y1].as_decimal(5)
-            x2_val = self.solver.model()[self.x2].as_decimal(5)
-            y2_val = self.solver.model()[self.y2].as_decimal(5)
-            draw.line([float(x1_val), float(y1_val), float(x2_val), float(y2_val)], fill="black")
-
+        draw.line([self.x1, self.y1, self.x2, self.y2], fill="black")
 
 
 class Constraint:

@@ -1,28 +1,32 @@
-from interpret import interpret
-from primitive import Line
+from interpret import lexer, parser, interpret
 from render import render_canvas
 
-# Example DSL script
-# circle x=100 y=150 radius=50
-# square x=200 y=250 side=100
-# circle x=400 y=400 radius=10
-# square x=400 y=400 side=10
+# S-expression DSL input
 dsl_code = """
-function star(x, y, radius)
-    line x1=x-radius y1=y x2=x y2=y+radius
-    line x1=x y1=y+radius x2=x+radius y2=y
-    line x1=x+radius y1=y x2=x-radius/2 y2=y-radius/2
-    line x1=x-radius/2 y1=y-radius/2 x2=x+radius/2 y2=y-radius/2
-    line x1=x+radius/2 y1=y-radius/2 x2=x-radius y2=y
-end
-star(250, 250, 100)
+(circle (x 100) (y 150) (radius 50))
+(square (x 200) (y 250) (side 100))
+(line (x1 50) (y1 50) (x2 150) (y2 150))
 """
-interpret(dsl_code)
-# shapes = [
-#     Line(150, 250, 250, 350),
-#     Line(250, 350, 350, 250),
-#     Line(350, 250, 200, 150),
-#     Line(200, 150, 300, 150),
-#     Line(300, 150, 150, 250)
-# ]
-# render_canvas(shapes)
+
+# Tokenize the DSL code
+print("\nTokenizing...")
+lexer.input(dsl_code)
+tokens = list(lexer)
+if not tokens:
+    print("No tokens generated! Lexer might be failing.")
+for token in tokens:
+    print(token)
+
+print("\nParsing...")
+print(dsl_code)
+ast = parser.parse(dsl_code, debug=True)
+print("\nParsed AST:", ast)
+
+if ast:
+    print("\nInterpreting AST...")
+    shapes = interpret(ast)
+    print("Shapes:", shapes)
+    print("\nRendering Canvas...")
+    render_canvas(shapes)
+else:
+    print("Parsing failed. Unable to interpret or render.")

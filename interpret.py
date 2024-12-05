@@ -1,68 +1,76 @@
-# interpret.py
+import ply.lex as lex
+import ply.yacc as yacc
 from primitive import Circle, Square, Line
-from render import render_canvas
 
-user_functions = {}
+start = 'sexpr_list'
 
-def interpret(dsl_code):
+# Token definitions
+tokens = (
+    'LPAREN', 'RPAREN', 'ID', 'NUMBER'
+)
+
+t_LPAREN = r'\('
+t_RPAREN = r'\)'
+t_ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
+
+# Number token
+def t_NUMBER(t):
+    r'\d+'
+    t.value = int(t.value)  # Convert the matched string to an integer
+    return t
+
+# Ignored characters
+t_ignore = ' \t\n'
+
+# Error handling for illegal characters
+def t_error(t):
+    print(f"Illegal character '{t.value[0]}'")
+    t.lexer.skip(1)
+
+# Build the lexer
+lexer = lex.lex()
+
+# Grammar rules
+def p_sexpr_list(p):
+    '''sexpr_list : sexpr
+                  | sexpr_list sexpr'''
+    if len(p) == 2:
+        p[0] = [p[1]]
+    else:
+        p[0] = p[1] + [p[2]]
+
+def p_sexpr(p):
+    '''sexpr : LPAREN ID param_list RPAREN'''
+    p[0] = (p[2], dict(p[3]))
+
+def p_param_list(p):
+    '''param_list : param
+                  | param_list param'''
+    if len(p) == 2:
+        p[0] = [p[1]]
+    else:
+        p[0] = p[1] + [p[2]]
+
+def p_param(p):
+    '''param : LPAREN ID NUMBER RPAREN'''
+    p[0] = (p[2], p[3])  # Convert the parameter into a tuple (name, value)
+
+def p_error(p):
+    if p:
+        print(f"Syntax error at token: {p.type} ({p.value}) on line {p.lineno}")
+    else:
+        print("Syntax error at EOF")
+
+# Build the parser
+parser = yacc.yacc()
+
+def interpret(ast):
     shapes = []
-    lines = dsl_code.strip().split("\n")
-    print(lines)
-    for line in lines:
-        tokens = line.split()
-        print(tokens)
-        
-        if tokens[0] == "function":
-            function_name = tokens[1]
-            parameters = tokens[2].strip("()").split(",")
-            body = []
-            for l in lines[lines.index(line) + 1:]:
-                if l.strip() == "end":
-                    break
-                body.append(l.strip())
-            user_functions[function_name] = (parameters, body)
-        
-        elif tokens[0] in user_functions:
-            function_name = tokens[0]
-            args = tokens[1].strip("()").split(",")
-            args = [arg.strip() for arg in args]  # Clean up whitespace
-            print(f"Executing function {function_name} with args {args}")
-            execute_function(function_name, args, shapes)
-
-        elif tokens[0] == "circle":
-            x = int(tokens[1].split("=")[1])
-            y = int(tokens[2].split("=")[1])
-            radius = int(tokens[3].split("=")[1])
-            shapes.append(Circle(x, y, radius))
-        elif tokens[0] == "square":
-            print("Parsing square:", tokens)
-            x = int(tokens[1].split("=")[1])
-            y = int(tokens[2].split("=")[1])
-            side = int(tokens[3].split("=")[1])
-            square = Square(x, y, side)
-            print("Created square:", square)
-            shapes.append(square)
-    print("Shapes to render:", shapes)
-    render_canvas(shapes)
-
-def execute_function(function_name, args, shapes):
-    params, body = user_functions[function_name]
-    param_map = {param.strip(): int(arg.strip()) for param, arg in zip(params, args)}
-    print(f"Parameter map: {param_map}")
-    
-    for line in body:
-        tokens = line.split()
-        print(f"Evaluating: x1={tokens[1].split('=')[1]}, param_map={param_map}")
-        if tokens[0] == "circle":
-            x = eval(tokens[1].split("=")[1], {}, param_map)
-            y = eval(tokens[2].split("=")[1], {}, param_map)
-            radius = eval(tokens[3].split("=")[1], {}, param_map)
-            shapes.append(Circle(x, y, radius))
-        if tokens[0] == "line":
-            x1 = eval(tokens[1].split("=")[1], {}, param_map)
-            y1 = eval(tokens[2].split("=")[1], {}, param_map)
-            x2 = eval(tokens[3].split("=")[1], {}, param_map)
-            y2 = eval(tokens[4].split("=")[1], {}, param_map)
-            print(f"Creating line with: ({x1}, {y1}) to ({x2}, {y2})")
-            shapes.append(Line(x1, y1, x2, y2))
-
+    for shape_type, params in ast:
+        if shape_type == 'circle':
+            shapes.append(Circle(params['x'], params['y'], params['radius']))
+        elif shape_type == 'square':
+            shapes.append(Square(params['x'], params['y'], params['side']))
+        elif shape_type == 'line':
+            shapes.append(Line(params['x1'], params['y1'], params['x2'], params['y2']))
+    return shapes

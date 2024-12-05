@@ -1,0 +1,149 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> sexpr_list
+Rule 1     sexpr_list -> sexpr
+Rule 2     sexpr_list -> sexpr_list sexpr
+Rule 3     sexpr -> LPAREN ID param_list RPAREN
+Rule 4     param_list -> param
+Rule 5     param_list -> param_list param
+Rule 6     param -> LPAREN ID NUMBER RPAREN
+
+Terminals, with rules where they appear
+
+ID                   : 3 6
+LPAREN               : 3 6
+NUMBER               : 6
+RPAREN               : 3 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+param                : 4 5
+param_list           : 3 5
+sexpr                : 1 2
+sexpr_list           : 2 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . sexpr_list
+    (1) sexpr_list -> . sexpr
+    (2) sexpr_list -> . sexpr_list sexpr
+    (3) sexpr -> . LPAREN ID param_list RPAREN
+
+    LPAREN          shift and go to state 3
+
+    sexpr_list                     shift and go to state 1
+    sexpr                          shift and go to state 2
+
+state 1
+
+    (0) S' -> sexpr_list .
+    (2) sexpr_list -> sexpr_list . sexpr
+    (3) sexpr -> . LPAREN ID param_list RPAREN
+
+    LPAREN          shift and go to state 3
+
+    sexpr                          shift and go to state 4
+
+state 2
+
+    (1) sexpr_list -> sexpr .
+
+    LPAREN          reduce using rule 1 (sexpr_list -> sexpr .)
+    $end            reduce using rule 1 (sexpr_list -> sexpr .)
+
+
+state 3
+
+    (3) sexpr -> LPAREN . ID param_list RPAREN
+
+    ID              shift and go to state 5
+
+
+state 4
+
+    (2) sexpr_list -> sexpr_list sexpr .
+
+    LPAREN          reduce using rule 2 (sexpr_list -> sexpr_list sexpr .)
+    $end            reduce using rule 2 (sexpr_list -> sexpr_list sexpr .)
+
+
+state 5
+
+    (3) sexpr -> LPAREN ID . param_list RPAREN
+    (4) param_list -> . param
+    (5) param_list -> . param_list param
+    (6) param -> . LPAREN ID NUMBER RPAREN
+
+    LPAREN          shift and go to state 6
+
+    param_list                     shift and go to state 7
+    param                          shift and go to state 8
+
+state 6
+
+    (6) param -> LPAREN . ID NUMBER RPAREN
+
+    ID              shift and go to state 9
+
+
+state 7
+
+    (3) sexpr -> LPAREN ID param_list . RPAREN
+    (5) param_list -> param_list . param
+    (6) param -> . LPAREN ID NUMBER RPAREN
+
+    RPAREN          shift and go to state 10
+    LPAREN          shift and go to state 6
+
+    param                          shift and go to state 11
+
+state 8
+
+    (4) param_list -> param .
+
+    RPAREN          reduce using rule 4 (param_list -> param .)
+    LPAREN          reduce using rule 4 (param_list -> param .)
+
+
+state 9
+
+    (6) param -> LPAREN ID . NUMBER RPAREN
+
+    NUMBER          shift and go to state 12
+
+
+state 10
+
+    (3) sexpr -> LPAREN ID param_list RPAREN .
+
+    LPAREN          reduce using rule 3 (sexpr -> LPAREN ID param_list RPAREN .)
+    $end            reduce using rule 3 (sexpr -> LPAREN ID param_list RPAREN .)
+
+
+state 11
+
+    (5) param_list -> param_list param .
+
+    RPAREN          reduce using rule 5 (param_list -> param_list param .)
+    LPAREN          reduce using rule 5 (param_list -> param_list param .)
+
+
+state 12
+
+    (6) param -> LPAREN ID NUMBER . RPAREN
+
+    RPAREN          shift and go to state 13
+
+
+state 13
+
+    (6) param -> LPAREN ID NUMBER RPAREN .
+
+    RPAREN          reduce using rule 6 (param -> LPAREN ID NUMBER RPAREN .)
+    LPAREN          reduce using rule 6 (param -> LPAREN ID NUMBER RPAREN .)
+

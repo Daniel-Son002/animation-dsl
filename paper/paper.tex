@@ -1,0 +1,99 @@
+\documentclass[acmsmall,screen]{acmart}
+\setcopyright{none}
+\copyrightyear{2022}
+\acmYear{2022}
+\acmDOI{}
+
+\citestyle{acmauthoryear}
+
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+
+\begin{document}
+
+\title{Animato: A Domain-Specific Language for Animation and Drawing}
+
+\author{Daniel Son}
+\email{danielson@college.harvard.edu}
+\affiliation{%
+  \institution{Harvard University}
+  \country{USA}
+}
+
+\renewcommand{\shortauthors}{Daniel Son}
+
+\settopmatter{printacmref=false}
+\settopmatter{printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[R]{CS252R (Fall 2024)}
+\fancypagestyle{firstfancy}{
+  \fancyhead{}
+  \fancyhead[R]{CS252R (Fall 2024)}
+  \fancyfoot{}
+}
+\makeatletter
+\let\@authorsaddresses\@empty
+\makeatother
+
+\begin{abstract}
+    Animato is a domain-specific language aimed to tackle the problem of tedious drawing for animation and shape rendering.
+    While there exists tools such as p5.js~\cite{p5js} and Penrose~\cite{penrose}, this project mimics and extends certain aspects of existing tools.
+
+\end{abstract}
+
+% \keywords{music synthesis, first species counterpoint, domain specific language, programming languages}
+
+\maketitle
+\thispagestyle{firstfancy}
+
+\section{Introduction}
+Art is prevalent in all shapes and forms, one being visual.
+In the field of animation, drawing is a tedious yet important task that 2-dimensional animators often have to utilize.
+Due to the tedious nature of hand-drawn animation, Animato aims to relieve animators of the need to draw each frame and develop animations using the domain-specific language.
+
+\section{Framework}
+\subsection{Primitives}
+In the current iteration of Animato, there are three primitives for shapes that are ready to be utilized.
+These include squares, circles, and line segments. Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
+
+\begin{lstlisting}[label=Sample custom function definition in Animato]
+    dsl_code = """
+        function star(x, y, radius)
+            line x1=x-radius y1=y x2=x y2=y+radius
+            line x1=x y1=y+radius x2=x+radius y2=y
+            line x1=x+radius y1=y x2=x-radius/2 y2=y-radius/2
+            line x1=x-radius/2 y1=y-radius/2 x2=x+radius/2 y2=y-radius/2
+            line x1=x+radius/2 y1=y-radius/2 x2=x-radius y2=y
+        end
+        star(250, 250, 100)
+    """
+\end{lstlisting}
+
+\subsection{Implementation}
+Animato uses a Python backend with Pillow for drawing visualizations and z3 for constraint solving.
+
+\section{Limitations and Future Work}
+While the intent of this project is to create a domain-specific language to assist programmers and animators to easily draw animations, there is still work that needs to be done in order to flesh out this idea.
+Firstly, the aspect of custom-defined functions is quite limited and Animato needs more functionality that gives a more user-friendly experience.
+While the aim of Animato is to allow everyone to create animations without the need to look in the backend to see what it's doing, this is quite difficult to allow users to actually do whatever they want.
+
+\section{Conclusion}
+Placehold
+
+\begin{acks}
+This paper and project serves as my final project for CS 252, Advanced Programming Languages, at Harvard University. Special thanks to Professor Nada Amin, Raffi Sanna, and classmates in CS 252 for providing feedback and advice on the project in it's developmental stage.
+\end{acks}
+
+\bibliography{references}
+\bibliographystyle{ACM-Reference-Format}
+
+\end{document}

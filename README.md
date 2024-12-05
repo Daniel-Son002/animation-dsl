@@ -1,1 +1,1 @@
-# animation-dsl
+# animation-dsl -- Animato

@@ -1,11 +1,15 @@
 from interpret import lexer, parser, interpret
 from render import render_canvas
 
-# S-expression DSL input
+# DSL input with user-defined shape
 dsl_code = """
-(circle (x 100) (y 150) (radius 50))
-(square (x 200) (y 250) (side 100))
-(line (x1 50) (y1 50) (x2 150) (y2 150))
+(define star (cx 0) (cy 0) (radius 50) (
+    (line (x1 (- cx radius)) (y1 (- cy radius)) (x2 (+ cx radius)) (y2 (+ cy radius)))
+    (line (x1 (- cx radius)) (y1 (+ cy radius)) (x2 (+ cx radius)) (y2 (- cy radius)))
+    (line (x1 cx) (y1 (- cy radius)) (x2 cx) (y2 (+ cy radius)))
+    (line (x1 (- cx radius)) (y1 cy) (x2 (+ cx radius)) (y2 cy))
+))
+(star (cx 250) (cy 250) (radius 100))
 """
 
 # Tokenize the DSL code

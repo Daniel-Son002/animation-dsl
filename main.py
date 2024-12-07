@@ -2,6 +2,16 @@ from interpret import lexer, parser, interpret
 from render import render_canvas
 
 # DSL input with user-defined shape
+# Test inputs:
+
+# (define star (cx 0) (cy 0) (radius 50) (
+#     (line (x1 (- cx radius)) (y1 (- cy radius)) (x2 (+ cx radius)) (y2 (+ cy radius)))
+#     (line (x1 (- cx radius)) (y1 (+ cy radius)) (x2 (+ cx radius)) (y2 (- cy radius)))
+#     (line (x1 cx) (y1 (- cy radius)) (x2 cx) (y2 (+ cy radius)))
+#     (line (x1 (- cx radius)) (y1 cy) (x2 (+ cx radius)) (y2 cy))
+# ))
+# (star (cx 250) (cy 250) (radius 100))
+
 dsl_code = """
 (define star (cx 0) (cy 0) (radius 50) (
     (line (x1 (- cx radius)) (y1 (- cy radius)) (x2 (+ cx radius)) (y2 (+ cy radius)))

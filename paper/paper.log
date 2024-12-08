@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.26)  8 DEC 2024 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.26)  8 DEC 2024 22:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -783,73 +783,99 @@ Package caption Info: End \AtBeginDocument code.
 Class acmart Info: Suppressing bibformat on input line 32.
 Class acmart Info: Printing folios on input line 33.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 55.
-LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF on input line 55.
+(Font)              scaled to size 14.4pt on input line 56.
+LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF on input line 56.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/LinuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 55.
+(Font)              scaled to size 14.4pt on input line 56.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 55.
+(Font)              scaled to size 14.4pt on input line 56.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 55.
+(Font)              scaled to size 10.95pt on input line 56.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 55.
+(Font)              scaled to size 10.95pt on input line 56.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 55.
+(Font)              scaled to size 9.0pt on input line 56.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 55.
+(Font)              scaled to size 9.0pt on input line 56.
 
 
 Class acmart Warning: No city present for an affiliation.
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 58.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 58.
-LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 72.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
-File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
-)
-LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 72.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-<images/star.png, id=47, 501.875pt x 503.8825pt>
-File: images/star.png Graphic file (type png)
-<use images/star.png>
-Package pdftex.def Info: images/star.png  used on input line 91.
-(pdftex.def)             Requested size: 197.91124pt x 198.70464pt.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 92.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 56.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 92.
+(Font)              scaled to size 9.0pt on input line 56.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 59.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 59.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 79.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 79.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 79.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 79--79
+[][][][][][][] 
+ []
 
 
-Class acmart Warning: A possible image without description on input line 93.
+Overfull \hbox (6.0pt too wide) in paragraph at lines 79--79
+[][][][][][][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 82.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
+File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 82.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<images/star.png, id=83, 501.875pt x 503.8825pt>
+File: images/star.png Graphic file (type png)
+<use images/star.png>
+Package pdftex.def Info: images/star.png  used on input line 101.
+(pdftex.def)             Requested size: 197.91124pt x 198.70464pt.
+
+
+Class acmart Warning: A possible image without description on input line 103.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 96.
-[1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(Font)              scaled to size 10.0pt on input line 106.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 108.
- Processing 'acks' comment.
+(Font)              scaled to size 10.0pt on input line 115.
+Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
  Comment 'acks' writing to comment.cut. Straight input of comment.cut. (./comment.cut) (./paper.bbl
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 5.
+ [2.2 <./images/star.png>]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 61.
 LaTeX Info: Redefining \tempurl on input line 67.
@@ -862,33 +888,37 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 Class acmart Warning: Some images may lack descriptions.
 
 
+Class acmart Warning: ACM keywords are mandatory for papers over two pages.
+
+
 Class acmart Warning: ACM reference format is mandatory 
 (acmart)              for papers over one page. 
 (acmart)              Please add printacmref=true to the 
 (acmart)              \settopmatter command..
 
 
+Class acmart Warning: CCS concepts are mandatory for papers over two pages.
+
+
 Class acmart Warning: Authors' addresses are mandatory for ACM journals.
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 118.
-[2.2 <./images/star.png>] (./paper.aux)
+[3.3] (./paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 8F0F8AF7DE666C049B1591F5E39ED707;1100.
+(rerunfilecheck)             Checksum: AAEE777E2668DD67D1A8E1CFE9B6C896;1336.
  ) 
 Here is how much of TeX's memory you used:
- 22101 strings out of 478268
- 352887 string characters out of 5846347
- 732379 words of memory out of 5000000
- 39573 multiletter control sequences out of 15000+600000
- 570089 words of font info for 170 fonts, out of 8000000 for 9000
+ 22268 strings out of 478268
+ 356563 string characters out of 5846347
+ 721241 words of memory out of 5000000
+ 39680 multiletter control sequences out of 15000+600000
+ 582924 words of font info for 211 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 84i,11n,131p,1067b,1307s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on paper.pdf (2 pages, 296917 bytes).
+ 84i,12n,131p,1067b,1882s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
+Output written on paper.pdf (3 pages, 302691 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 54366 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 64622 words of extra memory for PDF output out of 74296 (max. 10000000)
 

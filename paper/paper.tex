@@ -47,7 +47,8 @@
 \begin{abstract}
     Animato is a domain-specific language aimed to tackle the problem of tedious drawing for animation and shape rendering.
     While there exists tools such as p5.js~\cite{p5js} and Penrose~\cite{penrose}, this project mimics and extends certain aspects of existing tools.
-
+    We design a domain-specific language that takes shape inputs with locations and outputs the drawings on a canvas as a \texttt{.png} file.
+    Depending on the input, the output may be a singular or multiple image files where the sequence of image files can be input into an animation software such as Adobe Premiere Pro or TV Paint to create an animation.
 \end{abstract}
 
 % \keywords{music synthesis, first species counterpoint, domain specific language, programming languages}
@@ -60,13 +61,22 @@ Art is prevalent in all shapes and forms, one being visual.
 In the field of animation, drawing is a tedious yet important task that 2-dimensional animators often have to utilize.
 Due to the tedious nature of hand-drawn animation, Animato aims to relieve animators of the need to draw each frame and develop animations using the domain-specific language.
 
+\subsection{Related Work}
+Previously, much work has been done in the p5.js \cite{p5js} community as well as the Penrose \cite{penrose} CMU community to advance the code in art space. 
+p5.js is an open-source JavaScript library that aims to make creative coding accessible to artists and coders alike. 
+
 \section{Framework}
 \subsection{Primitives}
 In the current iteration of Animato, there are multiple primitives for shapes that are ready to be utilized.
 These include squares, circles, line segments, and some other harder to achieve common shapes. 
+
+\subsection{Implementation}
+Animato uses a Python backend with Pillow for drawing visualizations and z3 for constraint solving.
+
+\section{Example}
 Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
 
-\begin{lstlisting}[label=Sample custom function definition in Animato]
+\begin{lstlisting}[label=code, caption=Sample custom function definition in Animato]
     dsl_code = """
       (define star (cx 0) (cy 0) (radius 50) (
         (line (x1 (- cx radius))
@@ -87,16 +97,13 @@ Using these primitives, users are able to create custom shapes (functions) by de
 \end{lstlisting}
 
 \begin{center}
-  \begin{figure}
+  \begin{figure}[!h]
     \includegraphics[width=0.5\textwidth]{images/star.png}
     \caption{Output image of \texttt{dsl\_code} input}
   \end{figure}
 \end{center}
 
-The above \texttt{dsl\_code} input produces the 
-
-\subsection{Implementation}
-Animato uses a Python backend with Pillow for drawing visualizations and z3 for constraint solving.
+The above \texttt{dsl\_code} input produces the drawing shown in figure 1.
 
 \section{Limitations and Future Work}
 While the intent of this project is to create a domain-specific language to assist programmers and animators to easily draw animations, there is still work that needs to be done in order to flesh out this idea.

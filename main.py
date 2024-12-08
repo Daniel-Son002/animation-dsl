@@ -12,14 +12,15 @@ from render import render_canvas
 # ))
 # (star (cx 250) (cy 250) (radius 100))
 
+
 dsl_code = """
-(define star (cx 0) (cy 0) (radius 50) (
-    (line (x1 (- cx radius)) (y1 (- cy radius)) (x2 (+ cx radius)) (y2 (+ cy radius)))
-    (line (x1 (- cx radius)) (y1 (+ cy radius)) (x2 (+ cx radius)) (y2 (- cy radius)))
-    (line (x1 cx) (y1 (- cy radius)) (x2 cx) (y2 (+ cy radius)))
-    (line (x1 (- cx radius)) (y1 cy) (x2 (+ cx radius)) (y2 cy))
+(define stars (r 100) (
+    (star (cx 250) (cy 250) (radius r))
+    (star (cx 250) (cy 250) (radius r))
 ))
 (star (cx 250) (cy 250) (radius 100))
+(stars (r 100))
+(circle (x 150) (y 150) (radius 50))
 """
 
 # Tokenize the DSL code
@@ -38,6 +39,7 @@ print("\nParsed AST:", ast)
 
 if ast:
     print("\nInterpreting AST...")
+    print(ast)
     shapes = interpret(ast)
     print("Shapes:", shapes)
     print("\nRendering Canvas...")

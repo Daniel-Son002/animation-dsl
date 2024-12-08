@@ -13,7 +13,7 @@ tokens = (
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
-t_DEFINE = r'define'  # Define token for the `define` keyword
+t_DEFINE = r'define'
 
 # Number token
 def t_NUMBER(t):

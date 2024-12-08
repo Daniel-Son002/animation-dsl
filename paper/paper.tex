@@ -62,21 +62,38 @@ Due to the tedious nature of hand-drawn animation, Animato aims to relieve anima
 
 \section{Framework}
 \subsection{Primitives}
-In the current iteration of Animato, there are three primitives for shapes that are ready to be utilized.
-These include squares, circles, and line segments. Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
+In the current iteration of Animato, there are multiple primitives for shapes that are ready to be utilized.
+These include squares, circles, line segments, and some other harder to achieve common shapes. 
+Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
 
 \begin{lstlisting}[label=Sample custom function definition in Animato]
     dsl_code = """
-        function star(x, y, radius)
-            line x1=x-radius y1=y x2=x y2=y+radius
-            line x1=x y1=y+radius x2=x+radius y2=y
-            line x1=x+radius y1=y x2=x-radius/2 y2=y-radius/2
-            line x1=x-radius/2 y1=y-radius/2 x2=x+radius/2 y2=y-radius/2
-            line x1=x+radius/2 y1=y-radius/2 x2=x-radius y2=y
-        end
-        star(250, 250, 100)
+      (define star (cx 0) (cy 0) (radius 50) (
+        (line (x1 (- cx radius))
+              (y1 (- cy radius))
+              (x2 (+ cx radius))
+              (y2 (+ cy radius)))
+        (line (x1 (- cx radius))
+              (y1 (+ cy radius))
+              (x2 (+ cx radius))
+              (y2 (- cy radius)))
+        (line (x1 cx) (y1 (- cy radius))
+              (x2 cx) (y2 (+ cy radius)))
+        (line (x1 (- cx radius)) (y1 cy)
+              (x2 (+ cx radius)) (y2 cy))
+      ))
+      (star (cx 250) (cy 250) (radius 100))
     """
 \end{lstlisting}
+
+\begin{center}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{images/star.png}
+    \caption{Output image of \texttt{dsl\_code} input}
+  \end{figure}
+\end{center}
+
+The above \texttt{dsl\_code} input produces the 
 
 \subsection{Implementation}
 Animato uses a Python backend with Pillow for drawing visualizations and z3 for constraint solving.
@@ -85,9 +102,11 @@ Animato uses a Python backend with Pillow for drawing visualizations and z3 for 
 While the intent of this project is to create a domain-specific language to assist programmers and animators to easily draw animations, there is still work that needs to be done in order to flesh out this idea.
 Firstly, the aspect of custom-defined functions is quite limited and Animato needs more functionality that gives a more user-friendly experience.
 While the aim of Animato is to allow everyone to create animations without the need to look in the backend to see what it's doing, this is quite difficult to allow users to actually do whatever they want.
+In testing, it has been apparent that actually creating custom functions is quite hard since the user needs a precise understanding of the canvas space.
 
 \section{Conclusion}
-Placehold
+Overall, while the aim of \textit{Animato} is to provide a more concise and specialized language for animators/developers to use, further work must be done to polish the domain-specific langauge.
+At the current state, users are able to create a canvas with some specified shape drawings, including custom shapes. 
 
 \begin{acks}
 This paper and project serves as my final project for CS 252, Advanced Programming Languages, at Harvard University. Special thanks to Professor Nada Amin, Raffi Sanna, and classmates in CS 252 for providing feedback and advice on the project in it's developmental stage.

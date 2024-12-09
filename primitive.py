@@ -1,5 +1,3 @@
-from PIL import ImageDraw
-
 class Shape:
     def render(self, draw):
         raise NotImplementedError("Subclasses must implement render method.")

@@ -121,3 +121,19 @@ def interpret(ast):
                 params['cx'], params['cy'], params['radius']
             ))
     return shapes
+
+def animate_object(shape_type, start_params, end_params, duration, fps=12):
+    total_frames = int(fps * duration)
+    frames = []
+    
+    def interpolate(start, end, fraction):
+        return start + (end - start) * fraction
+
+    for frame in range(total_frames):
+        fraction = frame / (total_frames - 1)
+        interpolated_params = {
+            key: interpolate(start_params[key], end_params[key], fraction)
+            for key in start_params
+        }
+        frames.append((shape_type, interpolated_params))
+    return frames

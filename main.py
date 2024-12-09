@@ -1,5 +1,5 @@
-from interpret import lexer, parser, interpret
-from render import render_canvas
+from interpret import lexer, parser, interpret, animate_object
+from render import render_canvas, render_animation
 
 # DSL input with user-defined shape
 # Test inputs:
@@ -42,3 +42,22 @@ if ast:
     render_canvas(shapes)
 else:
     print("Parsing failed. Unable to interpret or render.")
+
+dsl_code_animation = """
+(animate line (x1 100) (y1 100) (x2 200) (y2 200) (end_x1 300) (end_y1 300) (end_x2 400) (end_y2 400) (duration 2))
+"""
+
+print("\nAnimating...")
+ast = parser.parse(dsl_code_animation, debug=True)
+if ast:
+    shapes_per_frame = []
+    for shape_type, params in ast:
+        start_params = {k: params[k] for k in params if not k.startswith("end_") and k != "duration"}
+        end_params = {k[4:]: params[k] for k in params if k.startswith("end_")}
+        duration = params["duration"]
+        frames = animate_object(shape_type, start_params, end_params, duration)
+        shapes_per_frame.extend(frames)
+    
+    render_animation(shapes_per_frame)
+else:
+    print("Parsing failed for animation test.")

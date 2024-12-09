@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper"] 1733692829 "paper.aux" "paper.bbl" "paper" 1733693152
+["bibtex paper"] 1733720175 "paper.aux" "paper.bbl" "paper" 1733720176
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/acmart/ACM-Reference-Format.bst" 1638825809 90330 871e55fb6d8dc37a22e9e4941a79e593 ""
-  "paper.aux" 1733693152 2693 6c44633de1a99593dfd9a1e061befb83 "pdflatex"
+  "paper.aux" 1733720176 3058 66b0960731cc22b9f7d85f3b74a28d3e "pdflatex"
   "references.bib" 1733346112 688 4ffbeca74906e2920c2598357a9e2436 ""
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1733693151 "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" "paper.pdf" "paper" 1733693152
-  "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" 1733693151 5491 684bc3e7aef4a338e78a52dfcc54144d ""
+["pdflatex"] 1733720175 "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" "paper.pdf" "paper" 1733720176
+  "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" 1733720174 7746 f2b14f638ac7743b61c634f365dfd2a1 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc" 1558214095 7693 0f2dce6d313c82989ec3a67fc24df2a0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -179,12 +179,14 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674760435 2826439 5ee9c5c40c3f44c01276b5b0b5927c90 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "comment.cut" 1733693151 272 b69815d7e3fa1acadd854c9c9bd8b1c5 "pdflatex"
+  "comment.cut" 1733720176 272 b69815d7e3fa1acadd854c9c9bd8b1c5 "pdflatex"
+  "images/penrose.png" 1733716926 73063 ce5df3d3bdccb36a2f9092ac1796fac9 ""
+  "images/primitives.png" 1733720079 15427 7af3cd585f84120fb4b1f669aebdc956 ""
   "images/star.png" 1733620571 58659 7d1a184917a9975fac118d595ada1d21 ""
-  "paper.aux" 1733693152 2693 6c44633de1a99593dfd9a1e061befb83 "pdflatex"
-  "paper.bbl" 1733692829 2759 76e8e349e4243a740c1057543248221a "bibtex paper"
-  "paper.out" 1733693152 1336 aaee777e2668dd67d1a8e1cfe9b6c896 "pdflatex"
-  "paper.tex" 1733693151 5491 684bc3e7aef4a338e78a52dfcc54144d ""
+  "paper.aux" 1733720176 3058 66b0960731cc22b9f7d85f3b74a28d3e "pdflatex"
+  "paper.bbl" 1733720175 2759 76e8e349e4243a740c1057543248221a "bibtex paper"
+  "paper.out" 1733720176 1336 ee698a3b1082bdccf8f8765bd4c4e9cc "pdflatex"
+  "paper.tex" 1733720174 7746 f2b14f638ac7743b61c634f365dfd2a1 ""
   (generated)
   "comment.cut"
   "paper.aux"

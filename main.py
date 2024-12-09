@@ -14,12 +14,8 @@ from render import render_canvas
 
 
 dsl_code = """
-(define stars (r 100) (
-    (star (cx 250) (cy 250) (radius r))
-    (star (cx 250) (cy 250) (radius r))
-))
-(star (cx 250) (cy 250) (radius 100))
-(stars (r 100))
+(line (x1 150) (y1 150) (x2 250) (y2 250))
+(square (x 250) (y 250) (side 50))
 (circle (x 150) (y 150) (radius 50))
 """
 

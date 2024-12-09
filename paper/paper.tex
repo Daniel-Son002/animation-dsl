@@ -64,14 +64,38 @@ Due to the tedious nature of hand-drawn animation, Animato aims to relieve anima
 \subsection{Related Work}
 Previously, much work has been done in the p5.js \cite{p5js} community as well as the Penrose \cite{penrose} CMU community to advance the code in art space. 
 p5.js is an open-source JavaScript library that aims to make creative coding accessible to artists and coders alike. 
+Similarly, Penrose provides a tool to allow users to create complex diagrams that would otherwise be hard to depict in a formal setting.
+
+\begin{center}
+  \begin{figure}[!h]
+    \includegraphics[width=0.49\textwidth]{images/penrose.png}
+    \caption{Example diagram created in Penrose of sets}
+  \end{figure}
+\end{center}
+
+\noindent The overall goal of these languages and libraries is to provide an easier and more precise way to create drawings.
+In this project, we attempt to recreate features of p5.js and Penrose in Animato's language and extend certain functionality to be more specialized.
+While Animato is not necessarily novel, it aims to be a more general and user-friendly langauge for animators who do not need to understand the backend.
 
 \section{Framework}
 \subsection{Primitives}
 In the current iteration of Animato, there are multiple primitives for shapes that are ready to be utilized.
 These include squares, circles, line segments, and some other harder to achieve common shapes. 
+While circles and squares are predefined shapes, lines can be drawn and connected with other lines to create more complex shapes.
+In the future, it would be very beneficial to implement a primitive to create bezier curves.
+The addition of bezier curves would allow users to create shapes that are less rigid (e.g. a cloud shape).
+
+\begin{center}
+  \begin{figure}[!h]
+    \includegraphics[width=0.49\textwidth]{images/primitives.png}
+    \caption{Example of circle, square, line segment primitives on canvas}
+  \end{figure}
+\end{center}
 
 \subsection{Implementation}
-Animato uses a Python backend with Pillow for drawing visualizations and z3 for constraint solving.
+Animato uses a Python backend with Pillow for drawing visualizations, z3 for constraint solving, and PLY/sexpr for parsing and intepretting the input.
+At the current state, running the \texttt{main.py} file with a valid \texttt{dsl\_code} input will only produce one file.
+The file is a visual representation of the input given with precise locations and relationships.
 
 \section{Example}
 Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
@@ -99,7 +123,7 @@ Using these primitives, users are able to create custom shapes (functions) by de
 \begin{center}
   \begin{figure}[!h]
     \includegraphics[width=0.5\textwidth]{images/star.png}
-    \caption{Output image of \texttt{dsl\_code} input}
+    \caption{Output image of \texttt{dsl\_code} input for a star}
   \end{figure}
 \end{center}
 
@@ -110,10 +134,16 @@ While the intent of this project is to create a domain-specific language to assi
 Firstly, the aspect of custom-defined functions is quite limited and Animato needs more functionality that gives a more user-friendly experience.
 While the aim of Animato is to allow everyone to create animations without the need to look in the backend to see what it's doing, this is quite difficult to allow users to actually do whatever they want.
 In testing, it has been apparent that actually creating custom functions is quite hard since the user needs a precise understanding of the canvas space.
+Further, without bezier curves, users are not able to create curved shapes making the scope of possible shapes limited.
+In future iterations of Animato, the main focus should be to create a more user-friendly experience and more functionality in the language itself.
+While not in the scope for this project, ideally users would be able to create a shape in the \texttt{dsl\_code} input and have a live view of the canvas.
+Currently, the only way to test the drawings is by running \texttt{main.py} and checking the \texttt{output.png} file. 
 
 \section{Conclusion}
-Overall, while the aim of \textit{Animato} is to provide a more concise and specialized language for animators/developers to use, further work must be done to polish the domain-specific langauge.
-At the current state, users are able to create a canvas with some specified shape drawings, including custom shapes. 
+Overall, while the aim of Animato is to provide a more concise and specialized language for animators/developers to use, further work must be done to polish the domain-specific langauge.
+At the current state, users are able to create a canvas with some specified shape drawings, including custom shapes.
+Further work should be done to extend the usability and enhance existing features.
+This project acts as a foundation that can be extended for more utility.
 
 \begin{acks}
 This paper and project serves as my final project for CS 252, Advanced Programming Languages, at Harvard University. Special thanks to Professor Nada Amin, Raffi Sanna, and classmates in CS 252 for providing feedback and advice on the project in it's developmental stage.

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex paper"] 1733720175 "paper.aux" "paper.bbl" "paper" 1733720176
+["bibtex paper"] 1733901097 "paper.aux" "paper.bbl" "paper" 1733902259
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/acmart/ACM-Reference-Format.bst" 1638825809 90330 871e55fb6d8dc37a22e9e4941a79e593 ""
-  "paper.aux" 1733720176 3058 66b0960731cc22b9f7d85f3b74a28d3e "pdflatex"
-  "references.bib" 1733346112 688 4ffbeca74906e2920c2598357a9e2436 ""
+  "paper.aux" 1733902259 4105 db827690ed7888fa4c3028db0525fa80 "pdflatex"
+  "references.bib" 1733809475 911 d1ece7ea9b7143d8d57bf637dda81456 ""
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1733720175 "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" "paper.pdf" "paper" 1733720176
-  "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" 1733720174 7746 f2b14f638ac7743b61c634f365dfd2a1 ""
+["pdflatex"] 1733902258 "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" "paper.pdf" "paper" 1733902259
+  "/Users/danielson/Desktop/HarvardSenior/cs252/animation-dsl/paper/paper.tex" 1733902258 10349 eed1fdb2357876ac8148678966b3cd05 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc" 1558214095 7693 0f2dce6d313c82989ec3a67fc24df2a0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc" 1490131464 2921 8ca0eb0831f9bc5da080d3697cfe67bf ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1490131464 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -168,6 +168,7 @@
   "/usr/local/texlive/2022/texmf-dist/tex/latex/oberdiek/ifdraft.sty" 1575152444 1922 5bdcc31b0573e5e7f31c36f1b88b6a7d ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty" 1158586182 21369 9ef165ca6df8815c92e693146a376c92 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/textcase/textcase.sty" 1568497026 2156 a092fd3ecd0a13fd597725ee6894b032 ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/totpages/totpages.sty" 1137110984 7670 b07e668265cf485332abe582e7ed306e ""
   "/usr/local/texlive/2022/texmf-dist/tex/latex/trimspaces/trimspaces.sty" 1253232110 1380 971a51b00a14503ddf754cab24c3f209 ""
@@ -179,14 +180,18 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674760435 2826439 5ee9c5c40c3f44c01276b5b0b5927c90 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "comment.cut" 1733720176 272 b69815d7e3fa1acadd854c9c9bd8b1c5 "pdflatex"
+  "comment.cut" 1733902259 271 167a1b5bbecb06914025a05b16dee20f "pdflatex"
   "images/penrose.png" 1733716926 73063 ce5df3d3bdccb36a2f9092ac1796fac9 ""
-  "images/primitives.png" 1733720079 15427 7af3cd585f84120fb4b1f669aebdc956 ""
+  "images/primitives.png" 1733864139 2575 92bdcdfa2531c4154d273f380cc2d4b5 ""
+  "images/sequence/output(1).png" 1733899600 2263 a2fdd104643199ead7de515f4174f2bb ""
+  "images/sequence/output(2).png" 1733899625 2263 7a4dfb770fe702d7ae0b9b8fadb27442 ""
+  "images/sequence/output(3).png" 1733899648 2263 6201dcde89397f2ce51142884f7b99a8 ""
+  "images/sequence/output(4).png" 1733899671 2263 6d0edc0c485951f76c26986c22aa5152 ""
   "images/star.png" 1733620571 58659 7d1a184917a9975fac118d595ada1d21 ""
-  "paper.aux" 1733720176 3058 66b0960731cc22b9f7d85f3b74a28d3e "pdflatex"
-  "paper.bbl" 1733720175 2759 76e8e349e4243a740c1057543248221a "bibtex paper"
-  "paper.out" 1733720176 1336 ee698a3b1082bdccf8f8765bd4c4e9cc "pdflatex"
-  "paper.tex" 1733720174 7746 f2b14f638ac7743b61c634f365dfd2a1 ""
+  "paper.aux" 1733902259 4105 db827690ed7888fa4c3028db0525fa80 "pdflatex"
+  "paper.bbl" 1733901097 3102 e0df0514fd070cbafc695af15b777c63 "bibtex paper"
+  "paper.out" 1733902259 1336 253f25f5006fef641afc52cf2fe628f4 "pdflatex"
+  "paper.tex" 1733902258 10349 eed1fdb2357876ac8148678966b3cd05 ""
   (generated)
   "comment.cut"
   "paper.aux"

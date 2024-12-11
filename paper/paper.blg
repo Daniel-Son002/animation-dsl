@@ -18,45 +18,46 @@ Warning--no key, author in p5js
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no key, author in p5js
 Warning--empty author in p5js
-You've used 2 entries,
+Warning--empty organization in manim
+You've used 3 entries,
             5981 wiz_defined-function locations,
-            1488 strings with 18234 characters,
-and the built_in function-call counts, 2116 in all, are:
-= -- 266
-> -- 71
+            1492 strings with 18343 characters,
+and the built_in function-call counts, 2807 in all, are:
+= -- 341
+> -- 88
 < -- 0
-+ -- 26
-- -- 24
-* -- 167
-:= -- 190
-add.period$ -- 9
-call.type$ -- 2
-change.case$ -- 16
-chr.to.int$ -- 2
-cite$ -- 13
-duplicate$ -- 167
-empty$ -- 125
-format.name$ -- 28
-if$ -- 500
++ -- 30
+- -- 31
+* -- 209
+:= -- 265
+add.period$ -- 13
+call.type$ -- 3
+change.case$ -- 21
+chr.to.int$ -- 3
+cite$ -- 15
+duplicate$ -- 231
+empty$ -- 170
+format.name$ -- 35
+if$ -- 646
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 3
-newline$ -- 64
-num.names$ -- 7
-pop$ -- 77
+newline$ -- 75
+num.names$ -- 14
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 45
 quote$ -- 0
-skip$ -- 54
+skip$ -- 86
 stack$ -- 0
-substring$ -- 122
-swap$ -- 8
+substring$ -- 171
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
-warning$ -- 7
-while$ -- 3
+type$ -- 76
+warning$ -- 8
+while$ -- 10
 width$ -- 0
-write$ -- 83
-(There were 7 warnings)
+write$ -- 103
+(There were 8 warnings)

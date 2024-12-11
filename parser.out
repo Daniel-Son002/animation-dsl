@@ -11,14 +11,18 @@ Rule 5     define_expr -> LPAREN DEFINE ID param_list LPAREN sexpr_list RPAREN R
 Rule 6     param_list -> param
 Rule 7     param_list -> param_list param
 Rule 8     param -> LPAREN ID NUMBER RPAREN
+Rule 9     param -> LPAREN ID STRING RPAREN
+Rule 10    param -> LPAREN ID BOOLEAN RPAREN
 
 Terminals, with rules where they appear
 
+BOOLEAN              : 10
 DEFINE               : 5
-ID                   : 3 5 8
-LPAREN               : 3 5 5 8
+ID                   : 3 5 8 9 10
+LPAREN               : 3 5 5 8 9 10
 NUMBER               : 8
-RPAREN               : 3 5 5 8
+RPAREN               : 3 5 5 8 9 10
+STRING               : 9
 error                : 
 
 Nonterminals, with rules where they appear
@@ -101,6 +105,8 @@ state 6
     (6) param_list -> . param
     (7) param_list -> . param_list param
     (8) param -> . LPAREN ID NUMBER RPAREN
+    (9) param -> . LPAREN ID STRING RPAREN
+    (10) param -> . LPAREN ID BOOLEAN RPAREN
 
     LPAREN          shift and go to state 8
 
@@ -117,6 +123,8 @@ state 7
 state 8
 
     (8) param -> LPAREN . ID NUMBER RPAREN
+    (9) param -> LPAREN . ID STRING RPAREN
+    (10) param -> LPAREN . ID BOOLEAN RPAREN
 
     ID              shift and go to state 12
 
@@ -126,6 +134,8 @@ state 9
     (3) sexpr -> LPAREN ID param_list . RPAREN
     (7) param_list -> param_list . param
     (8) param -> . LPAREN ID NUMBER RPAREN
+    (9) param -> . LPAREN ID STRING RPAREN
+    (10) param -> . LPAREN ID BOOLEAN RPAREN
 
     RPAREN          shift and go to state 13
     LPAREN          shift and go to state 8
@@ -146,6 +156,8 @@ state 11
     (6) param_list -> . param
     (7) param_list -> . param_list param
     (8) param -> . LPAREN ID NUMBER RPAREN
+    (9) param -> . LPAREN ID STRING RPAREN
+    (10) param -> . LPAREN ID BOOLEAN RPAREN
 
     LPAREN          shift and go to state 8
 
@@ -155,8 +167,12 @@ state 11
 state 12
 
     (8) param -> LPAREN ID . NUMBER RPAREN
+    (9) param -> LPAREN ID . STRING RPAREN
+    (10) param -> LPAREN ID . BOOLEAN RPAREN
 
     NUMBER          shift and go to state 16
+    STRING          shift and go to state 17
+    BOOLEAN         shift and go to state 18
 
 
 state 13
@@ -181,8 +197,10 @@ state 15
     (5) define_expr -> LPAREN DEFINE ID param_list . LPAREN sexpr_list RPAREN RPAREN
     (7) param_list -> param_list . param
     (8) param -> . LPAREN ID NUMBER RPAREN
+    (9) param -> . LPAREN ID STRING RPAREN
+    (10) param -> . LPAREN ID BOOLEAN RPAREN
 
-    LPAREN          shift and go to state 17
+    LPAREN          shift and go to state 19
 
     param                          shift and go to state 14
 
@@ -190,13 +208,29 @@ state 16
 
     (8) param -> LPAREN ID NUMBER . RPAREN
 
-    RPAREN          shift and go to state 18
+    RPAREN          shift and go to state 20
 
 
 state 17
 
+    (9) param -> LPAREN ID STRING . RPAREN
+
+    RPAREN          shift and go to state 21
+
+
+state 18
+
+    (10) param -> LPAREN ID BOOLEAN . RPAREN
+
+    RPAREN          shift and go to state 22
+
+
+state 19
+
     (5) define_expr -> LPAREN DEFINE ID param_list LPAREN . sexpr_list RPAREN RPAREN
     (8) param -> LPAREN . ID NUMBER RPAREN
+    (9) param -> LPAREN . ID STRING RPAREN
+    (10) param -> LPAREN . ID BOOLEAN RPAREN
     (1) sexpr_list -> . sexpr
     (2) sexpr_list -> . sexpr_list sexpr
     (3) sexpr -> . LPAREN ID param_list RPAREN
@@ -206,11 +240,11 @@ state 17
     ID              shift and go to state 12
     LPAREN          shift and go to state 3
 
-    sexpr_list                     shift and go to state 19
+    sexpr_list                     shift and go to state 23
     sexpr                          shift and go to state 2
     define_expr                    shift and go to state 4
 
-state 18
+state 20
 
     (8) param -> LPAREN ID NUMBER RPAREN .
 
@@ -218,7 +252,23 @@ state 18
     LPAREN          reduce using rule 8 (param -> LPAREN ID NUMBER RPAREN .)
 
 
-state 19
+state 21
+
+    (9) param -> LPAREN ID STRING RPAREN .
+
+    RPAREN          reduce using rule 9 (param -> LPAREN ID STRING RPAREN .)
+    LPAREN          reduce using rule 9 (param -> LPAREN ID STRING RPAREN .)
+
+
+state 22
+
+    (10) param -> LPAREN ID BOOLEAN RPAREN .
+
+    RPAREN          reduce using rule 10 (param -> LPAREN ID BOOLEAN RPAREN .)
+    LPAREN          reduce using rule 10 (param -> LPAREN ID BOOLEAN RPAREN .)
+
+
+state 23
 
     (5) define_expr -> LPAREN DEFINE ID param_list LPAREN sexpr_list . RPAREN RPAREN
     (2) sexpr_list -> sexpr_list . sexpr
@@ -226,20 +276,20 @@ state 19
     (4) sexpr -> . define_expr
     (5) define_expr -> . LPAREN DEFINE ID param_list LPAREN sexpr_list RPAREN RPAREN
 
-    RPAREN          shift and go to state 20
+    RPAREN          shift and go to state 24
     LPAREN          shift and go to state 3
 
     sexpr                          shift and go to state 5
     define_expr                    shift and go to state 4
 
-state 20
+state 24
 
     (5) define_expr -> LPAREN DEFINE ID param_list LPAREN sexpr_list RPAREN . RPAREN
 
-    RPAREN          shift and go to state 21
+    RPAREN          shift and go to state 25
 
 
-state 21
+state 25
 
     (5) define_expr -> LPAREN DEFINE ID param_list LPAREN sexpr_list RPAREN RPAREN .
 

@@ -85,6 +85,15 @@ While circles and squares are predefined shapes, lines can be drawn and connecte
 In the future, it would be very beneficial to implement a primitive to create bezier curves.
 The addition of bezier curves would allow users to create shapes that are less rigid (e.g. a cloud shape).
 
+
+\begin{lstlisting}[label=code, caption=Sample input demonstrating primitives and customizations]
+  dsl_code = """
+  (circle (x 150) (y 150) (radius 50) (color "red") (fill true))
+  (square (x 250) (y 250) (side 50) (color "blue") (fill false))
+  (line (x1 150) (y1 150) (x2 250) (y2 250) (color "green"))
+  """
+\end{lstlisting}
+
 \begin{center}
   \begin{figure}[!h]
     \includegraphics[width=0.49\textwidth]{images/primitives.png}
@@ -96,13 +105,14 @@ The addition of bezier curves would allow users to create shapes that are less r
 Animato uses a Python backend with Pillow for drawing visualizations, z3 for constraint solving, and PLY/sexpr for parsing and intepretting the input.
 At the current state, running the \texttt{main.py} file with a valid \texttt{dsl\_code} input will only produce one file.
 The file is a visual representation of the input given with precise locations and relationships.
+Further, users are able to give some customized features of the shapes such as outline color and fill.
 
 \section{Example}
 Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
 
 \begin{lstlisting}[label=code, caption=Sample custom function definition in Animato]
     dsl_code = """
-      (define star (cx 0) (cy 0) (radius 50) (
+      (define star (cx) (cy) (radius) (
         (line (x1 (- cx radius))
               (y1 (- cy radius))
               (x2 (+ cx radius))

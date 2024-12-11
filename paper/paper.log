@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.26)  10 DEC 2024 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.26)  11 DEC 2024 08:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -579,34 +579,49 @@ File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 3205.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count308
+\sf@farskip=\skip75
+\sf@captopadj=\dimen193
+\sf@capskip=\skip76
+\sf@nearskip=\skip77
+\c@subfigure=\count309
+\c@subfigure@save=\count310
+\c@lofdepth=\count311
+\c@subtable=\count312
+\c@subtable@save=\count313
+\c@lotdepth=\count314
+\sf@top=\skip78
+\sf@bottom=\skip79
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count308
+\lst@mode=\count315
 \lst@gtempboxa=\box59
 \lst@token=\toks38
-\lst@length=\count309
-\lst@currlwidth=\dimen193
-\lst@column=\count310
-\lst@pos=\count311
-\lst@lostspace=\dimen194
-\lst@width=\dimen195
-\lst@newlines=\count312
-\lst@lineno=\count313
-\lst@maxwidth=\dimen196
+\lst@length=\count316
+\lst@currlwidth=\dimen194
+\lst@column=\count317
+\lst@pos=\count318
+\lst@lostspace=\dimen195
+\lst@width=\dimen196
+\lst@newlines=\count319
+\lst@lineno=\count320
+\lst@maxwidth=\dimen197
  (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count314
-\lst@skipnumbers=\count315
+\c@lstnumber=\count321
+\lst@skipnumbers=\count322
 \lst@framebox=\box60
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-Package hyperref Info: Option `colorlinks' set `true' on input line 19.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 19.
-\c@theorem=\count316
+Package hyperref Info: Option `colorlinks' set `true' on input line 21.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 21.
+\c@theorem=\count323
  Include comment 'screenonly' Excluding comment 'printonly' Include comment 'anonsuppress' (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count317
+\l__color_backend_stack_int=\count324
 \l__pdf_internal_box=\box61
 ) (./paper.aux
 
@@ -615,90 +630,90 @@ LaTeX Warning: Label `code' multiply defined.
 )
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 19.
-LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line 19.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 21.
+LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 19.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 19.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 19.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 19.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 21.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 19.
-LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF on input line 19.
+(Font)              scaled to size 8.0pt on input line 21.
+LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 19.
+(Font)              scaled to size 8.0pt on input line 21.
 <<ot1.cmap>>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 19.
+(Font)              scaled to size 6.2pt on input line 21.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 19.
+(Font)              scaled to size 5.5pt on input line 21.
 <<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 19.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 19.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 19.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Info: Redefining \microtypecontext on input line 19.
-Package microtype Info: Applying patch `item' on input line 19.
-Package microtype Info: Applying patch `toc' on input line 19.
-Package microtype Info: Applying patch `eqnum' on input line 19.
-Package microtype Info: Applying patch `footnote' on input line 19.
+LaTeX Info: Redefining \microtypecontext on input line 21.
+Package microtype Info: Applying patch `item' on input line 21.
+Package microtype Info: Applying patch `toc' on input line 21.
+Package microtype Info: Applying patch `eqnum' on input line 21.
+Package microtype Info: Applying patch `footnote' on input line 21.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 19.
+LaTeX Info: Redefining \showhyphens on input line 21.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -706,33 +721,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 19.
+Package hyperref Info: Link coloring ON on input line 21.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count318
+\c@section@level=\count325
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
  (./paper.out) (./paper.out)
 \@outlinefile=\write4
 \openout4 = `paper.out'.
 
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
-\scratchdimen=\dimen197
+\scratchcounter=\count326
+\scratchdimen=\dimen198
 \scratchbox=\box62
-\nofMPsegments=\count320
-\nofMParguments=\count321
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count322
-\MPscratchDim=\dimen198
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen199
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks40
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -774,18 +789,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count325
-\c@mv@boldtabular=\count326
+\c@mv@tabular=\count332
+\c@mv@boldtabular=\count333
 (/usr/local/texlive/2022/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count327
-Class acmart Info: Suppressing bibformat on input line 32.
-Class acmart Info: Printing folios on input line 33.
+\c@lstlisting=\count334
+Class acmart Info: Suppressing bibformat on input line 34.
+Class acmart Info: Printing folios on input line 35.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 56.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF on input line 56.
@@ -870,43 +886,72 @@ Class acmart Warning: A possible image without description on input line 101.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 106.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 113.
+(Font)              scaled to size 8.0pt on input line 110.
 [2.2 <./images/primitives.png (PNG copy)>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 113--113
+<images/sequence/output(1).png, id=90, 501.875pt x 501.875pt>
+File: images/sequence/output(1).png Graphic file (type png)
+<use images/sequence/output(1).png>
+Package pdftex.def Info: images/sequence/output(1).png  used on input line 113.
+(pdftex.def)             Requested size: 94.99957pt x 94.99731pt.
+<images/sequence/output(2).png, id=91, 501.875pt x 501.875pt>
+File: images/sequence/output(2).png Graphic file (type png)
+<use images/sequence/output(2).png>
+Package pdftex.def Info: images/sequence/output(2).png  used on input line 115.
+(pdftex.def)             Requested size: 94.99957pt x 94.99731pt.
+<images/sequence/output(3).png, id=92, 501.875pt x 501.875pt>
+File: images/sequence/output(3).png Graphic file (type png)
+<use images/sequence/output(3).png>
+Package pdftex.def Info: images/sequence/output(3).png  used on input line 117.
+(pdftex.def)             Requested size: 94.99957pt x 94.99731pt.
+<images/sequence/output(4).png, id=93, 501.875pt x 501.875pt>
+File: images/sequence/output(4).png Graphic file (type png)
+<use images/sequence/output(4).png>
+Package pdftex.def Info: images/sequence/output(4).png  used on input line 119.
+(pdftex.def)             Requested size: 94.99957pt x 94.99731pt.
+
+
+Class acmart Warning: A possible image without description on input line 121.
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 126--126
 [][][][][][][] 
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 113--113
+Overfull \hbox (6.0pt too wide) in paragraph at lines 126--126
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 116.
+LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 129.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 116.
+(Font)              scaled to size 10.0pt on input line 129.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<images/star.png, id=87, 501.875pt x 503.8825pt>
+<images/star.png, id=94, 501.875pt x 503.8825pt>
 File: images/star.png Graphic file (type png)
 <use images/star.png>
-Package pdftex.def Info: images/star.png  used on input line 135.
+Package pdftex.def Info: images/star.png  used on input line 148.
 (pdftex.def)             Requested size: 197.91124pt x 198.70464pt.
 
 
-Class acmart Warning: A possible image without description on input line 137.
+Class acmart Warning: A possible image without description on input line 150.
 
-[3.3 <./images/star.png>] Processing 'acks' comment.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3.3 <./images/sequence/output(1).png (PNG copy)> <./images/sequence/output(2).png (PNG copy)> <./images/sequence/output(3).png (PNG copy)> <./images/sequence/output(4).png (PNG copy)>] [4.4 <./images/star.png>] Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
  Comment 'acks' writing to comment.cut. Straight input of comment.cut. (./comment.cut) (./paper.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 61.
-LaTeX Info: Redefining \tempurl on input line 67.
+(Font)              scaled to size 8.0pt on input line 57.
+LaTeX Info: Redefining \tempurl on input line 60.
+LaTeX Info: Redefining \tempurl on input line 80.
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-utf8.def
@@ -930,26 +975,26 @@ Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
 Class acmart Warning: Authors' addresses are mandatory for ACM journals.
 
-[4.4] (./paper.aux)
+[5.5] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: EE698A3B1082BDCCF8F8765BD4C4E9CC;1336.
+(rerunfilecheck)             Checksum: 253F25F5006FEF641AFC52CF2FE628F4;1336.
  ) 
 Here is how much of TeX's memory you used:
- 22293 strings out of 478268
- 357010 string characters out of 5846347
- 720268 words of memory out of 5000000
- 39690 multiletter control sequences out of 15000+600000
- 577969 words of font info for 214 fonts, out of 8000000 for 9000
+ 22516 strings out of 478268
+ 361356 string characters out of 5846347
+ 725633 words of memory out of 5000000
+ 39881 multiletter control sequences out of 15000+600000
+ 579497 words of font info for 225 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  84i,11n,131p,1067b,1311s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on paper.pdf (4 pages, 346915 bytes).
+Output written on paper.pdf (5 pages, 362426 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 60536 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 60556 words of extra memory for PDF output out of 61914 (max. 10000000)
 

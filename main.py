@@ -45,11 +45,13 @@ from render import render_canvas, render_animation
 # ))
 # (star (cx 250) (cy 250) (radius 100))
 
+# (circle (x 150) (y 150) (radius 50) (color "red") (fill true))
+# (square (x 250) (y 250) (side 50) (color "blue") (fill false))
+# (line (x1 150) (y1 150) (x2 250) (y2 250) (color "green"))
 
 dsl_code = """
-(circle (x 150) (y 150) (radius 50) (color "red") (fill true))
-(square (x 250) (y 250) (side 50) (color "blue") (fill false))
-(line (x1 150) (y1 150) (x2 250) (y2 250) (color "green"))
+(circle (x 150) (y 350) (radius 50) (color "red") (fill true))
+(line (x1 0) (y1 450) (x2 500) (y2 450) (color "green"))
 """
 
 print("\nTokenizing...")

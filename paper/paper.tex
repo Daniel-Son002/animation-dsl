@@ -8,6 +8,8 @@
 
 \usepackage{fancyhdr}
 \usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
 \usepackage{listings}
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
@@ -51,8 +53,6 @@
     Depending on the input, the output may be a singular or multiple image files where the sequence of image files can be input into an animation software such as Adobe Premiere Pro or TV Paint to create an animation.
 \end{abstract}
 
-% \keywords{music synthesis, first species counterpoint, domain specific language, programming languages}
-
 \maketitle
 \thispagestyle{firstfancy}
 
@@ -62,7 +62,7 @@ In the field of animation, drawing is a tedious yet important task that 2-dimens
 Due to the tedious nature of hand-drawn animation, Animato aims to relieve animators of the need to draw each frame and develop animations using the domain-specific language.
 
 \subsection{Related Work}
-Previously, much work has been done in the p5.js \cite{p5js} community as well as the Penrose \cite{penrose} CMU community to advance the code in art space. 
+Previously, much work has been done in the p5.js \cite{p5js} community as well as the Penrose \cite{penrose} community to advance the code in art space. 
 p5.js is an open-source JavaScript library that aims to make creative coding accessible to artists and coders alike. 
 Similarly, Penrose provides a tool to allow users to create complex diagrams that would otherwise be hard to depict in a formal setting.
 
@@ -75,7 +75,7 @@ Similarly, Penrose provides a tool to allow users to create complex diagrams tha
 
 \noindent The overall goal of these languages and libraries is to provide an easier and more precise way to create drawings.
 In this project, we attempt to recreate features of p5.js and Penrose in Animato's language and extend certain functionality to be more specialized.
-While Animato is not necessarily novel, it aims to be a more general and user-friendly langauge for animators who do not need to understand the backend.
+While Animato is not necessarily completely novel, it stems from preexisting work and aims to be a more general and user-friendly language for animators who do not need to understand the backend.
 
 \section{Framework}
 \subsection{Primitives}
@@ -102,10 +102,23 @@ The addition of bezier curves would allow users to create shapes that are less r
 \end{center}
 
 \subsection{Implementation}
-Animato uses a Python backend with Pillow for drawing visualizations, z3 for constraint solving, and PLY/sexpr for parsing and intepretting the input.
-At the current state, running the \texttt{main.py} file with a valid \texttt{dsl\_code} input will only produce one file.
-The file is a visual representation of the input given with precise locations and relationships.
-Further, users are able to give some customized features of the shapes such as outline color and fill.
+Animato uses a Python backend with Pillow for drawing visualizations, z3 for constraint solving, and PLY/sexpr for parsing and interpreting the input.
+At the current state, running the \texttt{main.py} file with a valid \texttt{dsl\_code} input will only produce one file; however, work is being done to integrate Manim \cite{manim} for ease of animation.
+While previous iterations have explored creating the sequence of images in-house like in Figure 3, an approach using Manim will be more efficient since it does not require the additional step to transfer the images to an animation software.
+The output file is a visual representation of the input given with precise locations and relationships.
+Further, users are able to give some customized features of the shapes such as outline color and fill as shown in Figure 2.
+
+\begin{figure}[!tbp]
+  \centering
+  \subfloat[Sequence 1.]{\includegraphics[width=0.24\textwidth]{images/sequence/output(1).png}}
+  \hfill
+  \subfloat[Sequence 2.]{\includegraphics[width=0.24\textwidth]{images/sequence/output(2).png}}
+  \hfill
+  \subfloat[Sequence 3.]{\includegraphics[width=0.24\textwidth]{images/sequence/output(3).png}}
+  \hfill
+  \subfloat[Sequence 4.]{\includegraphics[width=0.24\textwidth]{images/sequence/output(4).png}}
+  \caption{Animation sequence of ball falling}
+\end{figure}
 
 \section{Example}
 Using these primitives, users are able to create custom shapes (functions) by defining a function as follows:
@@ -138,25 +151,35 @@ Using these primitives, users are able to create custom shapes (functions) by de
 \end{center}
 
 The above \texttt{dsl\_code} input produces the drawing shown in figure 1.
+It is important to note that we recognize that defining a custom function is not very user-friendly.
+The custom function defined in the example requires precise knowledge of the canvas space as well as how the shape should be created exactly.
+While precision is a feature of Animato, it is also a weak point that can be improved in the scope of custom functions.
 
 \section{Limitations and Future Work}
 While the intent of this project is to create a domain-specific language to assist programmers and animators to easily draw animations, there is still work that needs to be done in order to flesh out this idea.
 Firstly, the aspect of custom-defined functions is quite limited and Animato needs more functionality that gives a more user-friendly experience.
-While the aim of Animato is to allow everyone to create animations without the need to look in the backend to see what it's doing, this is quite difficult to allow users to actually do whatever they want.
+While the aim of Animato is to allow users to create animations without the need to look at the backend implementation, it is evident that creating custom functions is still complex.
 In testing, it has been apparent that actually creating custom functions is quite hard since the user needs a precise understanding of the canvas space.
-Further, without bezier curves, users are not able to create curved shapes making the scope of possible shapes limited.
-In future iterations of Animato, the main focus should be to create a more user-friendly experience and more functionality in the language itself.
-While not in the scope for this project, ideally users would be able to create a shape in the \texttt{dsl\_code} input and have a live view of the canvas.
+Further, without more primitives such as bezier curves, users are not able to create curved shapes making the scope of possible shapes limited.
+In future iterations of Animato, the main focus should be to create a more user-friendly experience in terms of language input and more functionality in the language itself in terms of supported primitives.
+
+
+Further, while not in the scope for this project, ideally users would be able to create a shape in the \texttt{dsl\_code} input and have a live view of the canvas.
 Currently, the only way to test the drawings is by running \texttt{main.py} and checking the \texttt{output.png} file. 
+Allowing users to be able to have a side by side view of the domain-specific language input and the canvas would be more efficient and give a better experience animating.
 
 \section{Conclusion}
-Overall, while the aim of Animato is to provide a more concise and specialized language for animators/developers to use, further work must be done to polish the domain-specific langauge.
+Overall, while the aim of Animato is to provide a more concise and specialized language for animators/developers to use, further work must be done to polish the domain-specific language.
 At the current state, users are able to create a canvas with some specified shape drawings, including custom shapes.
-Further work should be done to extend the usability and enhance existing features.
-This project acts as a foundation that can be extended for more utility.
+Evidently from the examples shown throughout, the current implementation is less user-friendly than desired and shows a path of future work that must be taken in order for Animato to truly be usable.
+Further work should be done to extend the usability and enhance existing features such as a more concise way of defining custom shape functions.
+We clearly saw that defining a custom shape requires an unrealistic knowledge of the canvas space and more likely requires a lot of time using a trial and error process for shape creation.
+Further, verifying one's animation can only be done by running the file; however, it would be more efficient if users can view their animation changing in real time.
+This project acts as a foundation, providing the primitives and basic functionality of Animato. 
+Although this language is not complete, the list of future work can be extended for more utility.
 
 \begin{acks}
-This paper and project serves as my final project for CS 252, Advanced Programming Languages, at Harvard University. Special thanks to Professor Nada Amin, Raffi Sanna, and classmates in CS 252 for providing feedback and advice on the project in it's developmental stage.
+This paper and project serves as my final project for CS 252, Advanced Programming Languages, at Harvard University. Special thanks to Professor Nada Amin, Raffi Sanna, and classmates in CS 252 for providing feedback and advice on the project in its developmental stage.
 \end{acks}
 
 \bibliography{references}

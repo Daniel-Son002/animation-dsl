@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -45,6 +45,19 @@
 \newblock
 \urldef\tempurl%
 \url{https://p5js.org/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{The Manim Community Developers}(2024)]%
+        {manim}
+\bibfield{author}{\bibinfo{person}{{The Manim Community Developers}}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Manim – Mathematical Animation
+  Framework}}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.manim.community/}
 \showURL{%
 \tempurl}
 
